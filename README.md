@@ -1,4 +1,5 @@
 # SI 507 F17 - Project 6 - Databases & Planning
+#DBNAME = haspiel_507project6
 
 ### DEADLINE: Monday, November 27th at 11:59 PM
 
