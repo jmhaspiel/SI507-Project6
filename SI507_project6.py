@@ -91,9 +91,8 @@ for statedata in csvlist:
 	for row in statedata:
 		if row[0] != 'NAME':
 			site1 = site(row)
-			# stateid = cur.execute('SELECT "ID" from "States" WHERE "Name" = "MI"')
-			print(stateid)
-			print(site1.name)
+			# print(stateid)
+			# print(site1.name)
 
 			cur.execute(""" INSERT INTO Sites (Name, Type, Location, Description, State_ID) values(%s, %s, %s, %s, %s)""",
 			(site1.name, site1.type, site1.location, site1.description, stateid))
@@ -120,6 +119,6 @@ michigan_names = cur.fetchall()
 cur.execute("SELECT COUNT(Sites.Name) FROM Sites WHERE Sites.Location Like '%AR%' ")
 total_number_arkansas = cur.fetchall()
 
-print (total_number_arkansas)
+# print (total_number_arkansas)
 
 # We have not provided any tests, but you could write your own in this file or another file, if you want.
